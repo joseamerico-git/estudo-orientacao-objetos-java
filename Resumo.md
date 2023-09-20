@@ -340,6 +340,8 @@ Nem sempre o relacionamento é um para um, o relacionamento pode ser:
 0..* -> Representa uma associação contendo zero ou uma lista de elmentos
 1..* -. Representa uma associação contendo um ou uma lista de elementos depende ao menos de um elemento.
 
+Podemos também limitar no diagrama por exemplo 1..3
+
 # Visibilidade representada em UML
 
 (+) Visibilidade pública --> no Java public em UML (+)
@@ -351,12 +353,7 @@ Nem sempre o relacionamento é um para um, o relacionamento pode ser:
 O diagrama UML dá a direção do que desenvolver com a leitura de simbolos, como se fosse uma planta de um prédio da (engenharia civil) temos a planta da engenharia de software.
   
 
-
-
-
-
-
-- Diagrama de Objetos
+[DESENHAR ON-LINE UML](https://app.diagrams.net/)
 
 
 
