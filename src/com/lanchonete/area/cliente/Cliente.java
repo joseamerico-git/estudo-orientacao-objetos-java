@@ -1,0 +1,26 @@
+package com.lanchonete.area.cliente;
+
+public class Cliente {
+
+    public void escolherLanche(){
+        System.out.println("ESCOLHENDO O LANCHE");
+    }
+
+    public void fazerPedido(){
+        System.out.println("CLIENTE FAZENDO O PEDIDO");
+    }
+
+    public void pagarConta(){
+        consultarSaldoAplicativo();
+        System.out.println("CLIENTE PAGANDO A CONTA");
+    }
+    private void consultarSaldoAplicativo(){
+        System.out.println("CONSULTANDO SALDO NO APLICATIVO");
+    }
+    public void pegarPedidoBalcao(){
+        System.out.println("PEGANADO PEDIDO NO BALCÃO");
+    }
+
+
+    
+}
