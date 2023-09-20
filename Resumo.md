@@ -257,7 +257,108 @@ Quando criamos um construtora passando parâmetros informaçõe préviamente est
 ```
     Pessoa marcos = new Pessoa("1234565","Marcos");
     marcos.setEndereco("Rua das Gaivótas, 55");
+
 ```
+# Enums
+
+Enum é um tipo especial de classe onde os objetos são previamente criados imutáveis e disponíveis pro toda a aplicação.
+
+Usamos Enum quando nosso modelo de negócio contém objetos de mesmo contexto que já existm pré-estabelecida com a certeza de não haver muitas alterações de valores.
+
+Ex: 
+- Grau de Escolaridade: Analfabeto, Fundamental, Médio, Superior etc...
+- Estados de um país que são pré estabelcidos a probabilidade de mudar algum estado é mínima.
+- Estado Civil: Solteiro, Casado, Divorciado, Viúvo....
+
+# Observação não confundir listas de objetos com enums
+
+Enum é um conjunto de objetos que podem conter atributos e métodos.
+
+Enum no contexto de Estados Brasileiros por exemplo conterá 27 objetos do tipo estado 
+Não são variáveis são ojbetos pré estabelecidos.
+
+```
+    public enum EstadoBrasileiro{
+        SAO_PAULO ("SP", "São Paulo");
+        RIO_JANEIRO("RJ","Rio de Janeiro");
+        //continua....
+
+        private String nome;
+        private String sigla;
+
+        public EstadoBrasileiro(String sigla, String nome){
+            this.sigla = sigla;
+            this.nome = nome;
+
+        }
+
+        public String getSigla(){
+            return this.sigla;
+        }
+
+        public String getNomeMaiusculo(){
+            return nome.toUpperCase();
+        }
+
+    }
+```
+
+# Observação Enums são para valores pré estabelecidos que não sofream alterações de valores periodicamente.
+
+# UML 
+
+DIAGRAMAÇÃO EM ANÁLISES PARA INTERPRETAR COM FACILIDADE 
+
+UML(LINGUAGEM DE MODELAGEM UNIFICADA) é uma representação gráfica do projeto.
+
+# Diagramas estruturais
+
+- Diagrama de classes --> Ilustra gráficamente como as classes estarão relacionadas entre si, utilizando as regras de criação de classe.
+
+Associação de classes define um relacionamentro entre elas
+
+CLASSE A ------> CLASSE B - (ASSOCIAÇÃO SIMPLES)
+CLASSE A <-----> CLASSE B - (ASSOCIAÇÃO BIDIRECIONAL AS DUAS CLASSES PRECISAM SE ENXERGAR)
+
+CLASSE A <>----> CLASSE B - AGREGAÇÃO  (A CAPACIDADE QUE EU DETERMINO QUE EXISTA UMA RELAÇÃO E A CLASSE É AGREGADA A CLASSE A)
+
+CLASSE A <>====> CLASSE B - COMPOSIÇÃO (A DEPÊNDENCIA REAL DE UMA CLASSE COM A OUTRA)
+ 
+ AGREGAÇÃO: A classe principal contém uma relação com outra classe, mas ela pode existir sem a classe agregadora. Exemplo podemos ter candidatos que ainda não possuem profissão.
+![Alt text](image.png)
+
+ COMPOSIÇÃO: A classe principal compõe a outra classe ela depende da existência da outra classe. Não faz sentido Admissão sem um candidato.
+
+![Alt text](image-1.png)
+
+# Multiplicidade em UML
+
+Nem sempre o relacionamento é um para um, o relacionamento pode ser:
+
+*.-> Representa uma associação contendo uma lista de elementos
+*..1 -> Representa uma associação contendo zero ou um elemento
+0..* -> Representa uma associação contendo zero ou uma lista de elmentos
+1..* -. Representa uma associação contendo um ou uma lista de elementos depende ao menos de um elemento.
+
+# Visibilidade representada em UML
+
+(+) Visibilidade pública --> no Java public em UML (+)
+(#) Visibilidade protegida --> (muito associada com herança) no Java protected
+(-) Visibilidade privada --> no Java private no UML(-)
+
+![Alt text](image-2.png)
+
+O diagrama UML dá a direção do que desenvolver com a leitura de simbolos, como se fosse uma planta de um prédio da (engenharia civil) temos a planta da engenharia de software.
+  
+
+
+
+
+
+
+- Diagrama de Objetos
+
+
 
 
 
