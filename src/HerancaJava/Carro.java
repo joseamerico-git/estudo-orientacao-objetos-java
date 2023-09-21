@@ -1,15 +1,14 @@
 package HerancaJava;
 
-public class Carro {
-    private String chassi;
+public class Carro extends Veiculo {
 
-
-
-    public String getChassi() {
-        return this.chassi;
+    @Override
+    public void ligar() {
+       System.out.println("CARRO LIGANDO... ");
     }
 
-    public void setChassi(String chassi) {
-        this.chassi = chassi;
-    }
+    
+
+
+    
 }

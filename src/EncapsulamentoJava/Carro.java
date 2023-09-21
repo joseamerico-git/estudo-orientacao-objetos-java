@@ -1,4 +1,4 @@
-package PolimorfismoHerancaEncapsulamento;
+package EncapsulamentoJava;
 
 public class Carro {
    public void ligar(){

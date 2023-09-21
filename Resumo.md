@@ -383,7 +383,7 @@ Inúmeras maneiras de se realizar a mesma ação. Cada tipo de veículo de sua f
 
 Primeiro ponto do encapsulamento é verificar quais métodos devem ser escondidos para a classe principal.
 
-No exemplo utilizado 
+# No exemplo utilizado o 1º Ponto do Encapslamento
 
 Carro.java e Autodromo.java
 
@@ -399,7 +399,137 @@ public class Autodromo {
     
 }
 ```
-Retiramos os métodos conferirCambio() e verificarCombustivel() e alteramos na classe Carro para private esses métodos, e os inserimos no método ligar dentro da própria classe Carro.
+Utilizando o Encapsulamento --> Retiramos os métodos conferirCambio() e verificarCombustivel() e alteramos na classe Carro para private esses métodos, e os inserimos no método ligar dentro da própria classe Carro.
+
+# Na Herança precisamos identificar quais métodos são repetidos em vários Objetos
+Exemplo:
+
+As classes Carro e Moto, tem muita coisa em comum, nº chassi, placa etc...
+Teriamos que implementar métodos repetidos nas duas classes então utilizamos Hernaça criando uma classe Veiculo que contém esses atributos e nas classes Carro e Moto extendemos a classe Veiculo e consequêntemente teremos os métodos getChassi e getPlaca disponíveis, porém implementados em apenas um lugar no caso a classe Veiculo.
+
+# Abstração Observando as duas classes
+
+Carro e Moto notamos que ainda os dois possuem o método ligar()
+Sabemos que um carro e uma moto são ligados de uma forma diferente do ponto de vista conceitual.
+
+# Abstração o abstract 
+
+Todo veículo vai ter o método ligar, porém quem quiser ser um veiculo terá que abstrair a maneira como isso deve acontecer.
+Para isso criamos métodos abstract 
+
+ex:
+# Na abstração nota-se que temos um único comportamento, mas com comportamentos difrentes.
+
+```
+    package HerancaJava;
+
+public abstract class Veiculo { // ==> tornamos a classe abstata
+    private String chassi;
+    private String placa;
+
+    public void setChassi(String chassi) {
+        this.chassi = chassi;
+    }
+
+    public String getPlaca() {
+        return this.placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public abstract void ligar(); // -> criamos o método abstract ligar
+    
+    
+}
+
+```
+
+# Praticando
+
+A imagem abaixo ilustra o senário para a implementação
+
+![Alt text](image-3.png)
+
+Observando a imagem notamos que temos: 
+A classe dispõe do nome MSNMessenger
++enviarMensagem():void (a classe contém vários métodos publico(+) e sem retorno(void), bem como os demais métodos também).
+Não contém atributos no momento.
+
+# Treinando o Encapsulamento
+
+Analisando o senário 1 
+
+Ao instalarmos o MSN e ao querer enviar uma mensagem, fosse solicitado que verificassemos a conexão com a internet e depois, pedir pra você salvar a mensagem no histórico? 
+Ao enviar um SMS pelo celular primeiro você precisasse consultar manualmente o saldo?
+
+# OBS: Nem tudo precisam estar disponíveis ao usuário.
+
+
+Então vem as perguntas
+
+Todos os métodos são publicos?
+
+Todos os métodos precisam estar visíveis?
+
+# Com as observações notamos que os dois métodos da imagem acima precisam ser alterados no diagrama trocando o sinal de (+) para o de (-), pois precisamos alterar os modificadores na hora da implementação.
+
+# Observe as alterções abaixo, depois de ter feito as refatorações, ainda antes da implementação:
+
+![Alt text](image-4.png)
+
+Aglomeramos então os métodos que não convém para serem executados dentro da própria classe, tornando-os private.
+
+# Os métodos devem ser bem definidos, para uma melhor visualização no momento da implementação.
+
+# HERANÇÃ 2º Pilar da OO
+
+
+# Imaginando que em uma entrevista fosse requistado que implemtassemos o diagrama abaixo.
+
+![Alt text](image-5.png)
+
+![Alt text](image-6.png)
+
+## Observamos na imagem acima, existem três classes com métodos muito parecidos
+
+Em um primeiro momento poderiamos ter a idéia de construir as três classes com seus respectivos métodos e beleza! Mas não é bem isso quando trata-se de POO.
+
+Além da capacidade de interpretação de um diagrama é necessário ter domínio dos pilares da POO e aplica-los em situações iguais a esta.
+
+# NOTE: TODAS AS CLASSES POSSUEM A MESMA ESTRUTURA COMPORTAMENTAL, E DIANTE DISSO ESTE CONTEXTO SE ENCAIXA PERFEITAMENTE O SEGUNDO PILAR DA POO, A HERANÇA.
+
+# SOLUÇÃO:
+
+Será que todos os sistemas de mensagens realizam as mesmas operações da mesma maneira? Ai entra os pilares da 
+
+# Abstração e Polimorfismo e refatoração de códigos.
+
+# Observação utilizando a herança elevamos os métodos para todas as classes, mas isso não é o suficiente, mas neste caso os serviços de mensagens distintos cada um tem sua lógica de envio de mensagens
+
+Então em resumo precisaremos entrar com a abstração e polimorfismo...
+
+Tornando nossa classe ServicoMensagemInstantanea abstrata, cada Servico de mensagem criado será obrigado a implementar os métodos conforme suas peculiaridades.
+
+Criar uma classe genérica abstract com todos os métodos, e utilizar nas demais classes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
