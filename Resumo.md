@@ -604,6 +604,34 @@ Notamos que quando eu digo que tenho o conceito de interfaces minhas classes pod
 
 Trazemos então a Herança multipla baseada em Interfaes.
 
+Criando uma Interface
+```
+package interfaces.equipamentos.copiadora;
+
+public class Xerox implements Copiadora {
+
+    @Override
+    public void copiar() {
+        System.out.println("Copiando ");
+    }
+    
+}
+
+
+```
+
+
+Utilizando Interfaces (Instanciando)
+```
+public class Fabrica {
+    public static void main(String[] args) {
+        // As Interfaces distribuem características relacionadas a flexibilidade ou de utilidade de uma classe
+        Impressora em = new EquipamentoMultiFuncional();
+        em.imprimir();
+    }
+}
+```
+
 
 
 
