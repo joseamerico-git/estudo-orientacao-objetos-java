@@ -355,6 +355,54 @@ O diagrama UML dá a direção do que desenvolver com a leitura de simbolos, com
 
 [DESENHAR ON-LINE UML](https://app.diagrams.net/)
 
+# Pilares da POO
+
+Programação orientada a objetos POO em inglês OOP é um paradigma de programação baseado em conceitos de objetos que podem conter dados na forma de campos conhecidos como atributos, e códigos na forma de procedimentos, conhecidos como métodos.
+
+É um contexto análogo do mundo real, tudo o que referimos sao objetos.
+Conta bancária, Aluno, Veículo, Transferência, Frutas entre outras.
+
+A Orientação a objetos está no contexto das aplicações atuais, por causa da reutilização e reaproveitamento de códigos.
+
+# Encapsulamento: 
+
+Nem tudo precisa estar acessível ou visível, grande parte do nosso algoritmo pode ser distribuido em métodos com finalidades específicas que no exemplo de ligar um veículo exige muitas etapas para a engenharia , mas para o condutor só vê a ignição, dar partida é a magia.
+
+# Herança:
+
+# Características e comportamentos comuns podem ser elevados e compartilhados através de uma hierarquia de objetos.
+Ex: Um carro ou motocicleta possuem propriedades como chassi, ano fabricação e métodos acelerar, frear. Logo poderiamos criar uma classe Veículo para herdar por Carro e Motocicleta.
+
+# Abstração: É a indisponibilidade para determinar a lógica de um ou mais comportamentos:
+Exempolo a classe genérica Veículo determina duas ações como acelerar e frear. logo estes comportamentos deverão ser abstratos pois existem mais de uma maneira de realizar a mesma operação. 
+
+
+# Polimorfismo esta associado a vários ou inúmeras alternativas para se realizar um comportamento.
+
+Inúmeras maneiras de se realizar a mesma ação. Cada tipo de veículo de sua forma polimorfica determina a lógica de aceleraração e franagem dos respectivos veículos.
+
+Primeiro ponto do encapsulamento é verificar quais métodos devem ser escondidos para a classe principal.
+
+No exemplo utilizado 
+
+Carro.java e Autodromo.java
+
+```
+package PolimorfismoHerancaEncapsulamento;
+
+public class Autodromo {
+    public static void main(String[] args) {
+        Carro jeep = new Carro();
+        
+        jeep.ligar();
+    }
+    
+}
+```
+Retiramos os métodos conferirCambio() e verificarCombustivel() e alteramos na classe Carro para private esses métodos, e os inserimos no método ligar dentro da própria classe Carro.
+
+
+
 
 
 
