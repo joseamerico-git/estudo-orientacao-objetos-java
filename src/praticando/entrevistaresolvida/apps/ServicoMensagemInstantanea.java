@@ -13,6 +13,7 @@ public abstract class ServicoMensagemInstantanea {
         System.out.println("Verificando saldo");
     }
 
+    //Somente os filhos conhecem esse método
     protected void validarConectadoInternet() {
         System.out.println("Validando a conexão ");
     }

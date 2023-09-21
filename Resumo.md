@@ -547,6 +547,73 @@ Ao salvar os históricos cada aplicativo salva em seus respectivos servidoes.
 
 ```
 
+# INTERFACES (Java) Não estamos referindo a interace gráfica e sim a um conceito de abstração dentro da linguagem Java.
+
+É um nível mais avançado apara abastração são 
+contratos que precisam ser definidos. 
+
+# abstract
+Veiculo pode ser um carro uma moto etc..
+
+# Interfaces 
+O mesmo objeto ter propriedades e papeis diferentes em uma mesma app.
+
+# A linguagem Java não permite HERANÇA Múltipla por questões de segurança.
+
+class a extends b, c { --> Errado
+
+}
+
+class implements b,c {
+
+}
+
+# A medida que surgem necessidades, novos equipamentos (objetos) nascem para atender as expectativas de oferecer ferramentas, finalidades bem específicas como por exemplo:
+
+Impressoras, Digitalizadoras, Copiadeoras etc...
+
+Observe que não há uma expecificação de marca, modelo ou capacidade de execução das classes citadas acima, isto é o que consideramos o nível mais abstrato da orientação a objetos denominados de Interfaces.
+
+Impressora --> copiadora --> digitalizador
+
+Pode ser impressora de várias marcas
+Pode ser copiadoras de várias marcas
+Pode ser digitalizador de várias marcas
+
+Criar uma classe EquipamentMultiFuncional para testar o uso de interfaces já que por motivos de segurança Java não permite extender várias classes
+
+
+# Quando percebemos que existe a necessidade ter características que represntam outras classes essas deverão ser Interfaces. 
+
+## Esse é o nível mais alto da abstração em Java
+
+Temos que:
+
+Na na impressora multifuncional eu posso
+Imprimir, copiar e digitalizar
+
+# Observando o diagrama de classes abastract abaixo:
+senário 1.
+![Alt text](image-7.png)
+
+# Observando o diagrama com Interfaces
+senário 2.
+![Alt text](image-8.png)
+
+Notamos que quando eu digo que tenho o conceito de interfaces minhas classes podem extender minhas interfaces e implementar conforme suas necessidades.
+
+Trazemos então a Herança multipla baseada em Interfaes.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
