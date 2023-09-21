@@ -607,7 +607,7 @@ Trazemos então a Herança multipla baseada em Interfaes.
 Criando uma Interface
 ```
 package interfaces.equipamentos.copiadora;
-
+            //implements Copiadora, Impressora etc...                    
 public class Xerox implements Copiadora {
 
     @Override
@@ -631,7 +631,11 @@ public class Fabrica {
     }
 }
 ```
+Observar sempre de qual pacote estamos importando nossas classes no exemplo acima temos uma Classe Scanner que criamos em nossos pacotes, mas na linguagem java no pacote java.util existe a classe Scanner...
 
+Curiosidade:
+
+Uma das mais importantes ilustrações quanto ao uso de interfaces para desenvolvimento de componentes revolucionários é apresentado em 2007 por Steve Jobs ao lançar o primeiro iPhone na história.
 
 
 
