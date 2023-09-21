@@ -510,9 +510,56 @@ Será que todos os sistemas de mensagens realizam as mesmas operações da mesma
 
 Então em resumo precisaremos entrar com a abstração e polimorfismo...
 
-Tornando nossa classe ServicoMensagemInstantanea abstrata, cada Servico de mensagem criado será obrigado a implementar os métodos conforme suas peculiaridades.
+Tornando nossa classe ServicoMensagemInstantanea abstrata, cada Servico de mensagem criado será obrigado a implementar os métodos conforme suas peculiaridades. É criado então um contrato com quem implementar ServicoMensagemInstantanea (serviço pai).
+
+Transferimos a responsabilidade para a classe que vai extender essa classe implementar sua própria maneira de enviar ou receber mensagens.
 
 Criar uma classe genérica abstract com todos os métodos, e utilizar nas demais classes
+
+# Determina-se que a classe abstrata "abstract" tem métodos que não tem corpo {}
+
+# APLICANDO O POLIMORFISMO 
+(POLIMORFISMO) TEMOS UM OBJETO ABSTRATO QUE NÃO TEM CONHECIMENTO DE COMO AS COISAS ACONTECEM.
+
+# O polimorfismo está muito associado ao Modificador protected 
+
+Lembrando que nos requisitos do sistema de mensagens notamos que além do envio e recebimento das mensagens precisamos validar se o aplicativo está:
+
+está conectado
+tem saldo
+salva em histórico
+
+Ao salvar os históricos cada aplicativo salva em seus respectivos servidoes.
+
+# Mas gostariamos que somente as classes filhas soubessem dos métodos verificar conexão etc... Ai entra o protected, mas não o bastante devemos organizar os pacotes, caso contrário teremos visibilidade ainda que com o protected no método verificarConexão.
+
+
+```
+//Somente os filhos conhecem esse método
+    protected void validarConectadoInternet() {
+        System.out.println("Validando a conexão ");
+    }
+
+/*todos os filhos são obrigados a implemntar de sua maneira lembrando que somente dentro de um mesmo pacote package existe essa visibilidade.*/
+    public abstract void enviarMensagem();
+
+//Observação a classe também deverá ser abastact.
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
